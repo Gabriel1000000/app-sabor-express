@@ -8,3 +8,4 @@ if num%2 != 0:
     print('Esse número é ímpar')
 else:
     print('Na proxima tentativa digite apenas números!')
+    
