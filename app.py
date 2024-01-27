@@ -1,7 +1,6 @@
 import os
 
-restaurantes = [{'nome':'Ichiraco', 'categoria':'macarrão', 'ativo':True},
-                {'nome':'Zé da pança', 'categoria':'churrasco', 'ativo':True},
+restaurantes = [{'nome':'Zé da pança', 'categoria':'churrasco', 'ativo':True},
                 {'nome':'Saude vegana', 'categoria':'vegano', 'ativo':False}
 ]
 
@@ -24,9 +23,9 @@ def exibir_opcao():
 
 def exibir_subtitulo(texto):
     os.system('cls')
-    linha = '*'*(len(texto)*4)
+    linha = '*'*(len(texto))
     print(linha)
-    print(f'======================{texto}=========================================')
+    print(f'{texto}')
     print(linha)
 
 def encerrando_programa():
@@ -44,7 +43,7 @@ def opcao_invalida(texto):
     voltar_ao_menu()
 
 def cadastro_novo_restaurantes():
-    exibir_subtitulo('Cadastro de restaurante')
+    exibir_subtitulo(' Cadastro de restaurante ')
     nome_restaurantes = input('Informe o nome do restaurante: ')
     categoria = input(f'Informe a categoria do restaurante {nome_restaurantes}: ')
     dados_do_restaurante = {'nome':nome_restaurantes,'categoria':categoria, 'ativo':False}
@@ -53,7 +52,7 @@ def cadastro_novo_restaurantes():
     voltar_ao_menu()
 
 def listar_restaurantes():
-    exibir_subtitulo('Lista de restaurantes')
+    exibir_subtitulo(' Lista de restaurantes ')
     print(f'{"Nome dos restaurantes".ljust(26)} | {"Categoria".ljust(31)} | {"Status"} ')
     for restaurante in restaurantes: 
             nome_restaurante = restaurante['nome']
@@ -64,7 +63,7 @@ def listar_restaurantes():
     voltar_ao_menu()
 
 def alterar_status():
-    exibir_subtitulo('Alterando o status do restaurante!')
+    exibir_subtitulo(' Alterando o status do restaurante ')
     nome_restaurante = input('Informe o nome do restaurante deseja alterar o status: ')
     restaurante_encontrado = False
 
